@@ -77,3 +77,17 @@
 * **XGBoost is considered one of the best models in terms of performance and accuracy.**
 * **The algorithm has internal cross-validation capabilities.**
 
+# How XGBoost works:
+* XGBoost is a boosting algorithm, which is an ensemble technique based on sequential learning. Unlike bagging (parallel), boosting trains models one after another.
+* XGBoost is considered an extension of gradient boosting.
+* The process begins by creating a base model. A simple initial assumption for prediction can be the average of the target variable. This initial model will have errors or residuals.
+* The next model is then fitted on these residuals with the objective of minimising them. For example, a decision tree might be fitted to these residual values using the original independent features (age in the example) as input and the residuals as the target.
+* XGBoost calculates a similarity score of residuals at each node of the tree. This score is determined by the sum of squared residuals divided by the number of residuals plus a regularisation parameter lambda.
+* A tree splitting criterion is defined (e.g., age greater than 10) to divide the data in the residual tree.
+* The gain from a split is calculated as the difference between the similarity score after the split and the similarity score before the split.
+* A parameter called gamma acts as a threshold for splitting. A split will only occur if the calculated gain is greater than the given gamma value. This mechanism facilitates auto pruning of the tree, helping to control overfitting. A higher gamma leads to more aggressive pruning.
+* The lambda parameter is a regularisation parameter that helps control overfitting. Increasing lambda reduces the similarity score and consequently the gain, potentially preventing splits and pruning the tree. Lambda also helps to reduce the impact of outliers on predictions.
+* For prediction with a new data point, the output of the residual tree (sum of residuals divided by the number of residuals plus lambda for the leaf node it falls into) is combined with the previous prediction using a learning rate (eta).
+* The new prediction is calculated as: **Previous Prediction + Learning Rate * Output of the Residual Tree.** The learning rate (eta) controls how quickly the model converges to the next value.
+* After obtaining the new prediction, the residual is updated (original target value minus the new prediction).
+* Subsequent models are trained on these new, reduced residuals, and this process is repeated iteratively. The goal is to progressively reduce the residuals and create a final ensemble model that provides accurate predictions.
