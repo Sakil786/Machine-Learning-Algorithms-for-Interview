@@ -58,4 +58,22 @@
 * This process is iterative; after the first iteration, new residuals are calculated based on the updated predictions, and another model is trained to predict these new residuals.
 * The final prediction of the Gradient Boost model is an additive combination of the initial base value and the predictions from each of the subsequent residual models, each scaled by the learning rate. This continues for a predefined number of trees or until a certain criterion is met.
 
+# overview of XGBoost:
+* XGBoost is a popular and widely used boosting algorithm favoured by many data scientists.
+* It offers multi-language support, allowing you to run it with Python, R, Java, Scala, and Julia.
+* XGBoost is platform-free, enabling its use across different operating systems like Windows, macOS, and Linux.
+* It boasts easy installation and compatibility with various systems and integration with many platforms.
+* XGBoost has gained positive recognition due to its fast processing speed and fast performance leading to quick results.
+* It frequently outperforms other boosting algorithms and ensemble learning methods.
+* Speed and performance are key advantages of XGBoost.
+* XGBoost is fast to train and fast to predict.
+* It supports parallel processing by using all CPU cores, which contributes to its speed.
+* XGBoost can be run in a distributed manner, leveraging the maximum computational power of distributed systems.
+* It utilizes cache awareness, optimising data access from memory for faster computations.
+* XGBoost employs memory cache access to store frequently accessed information for quicker retrieval.
+* It is highly scalable and can efficiently handle datasets of various sizes.
+* **XGBoost incorporates automatic regularisation to prevent model overfitting.**
+* **It internally handles missing values in the data, making it more robust.**
+* **XGBoost is considered one of the best models in terms of performance and accuracy.**
+* **The algorithm has internal cross-validation capabilities.**
 
