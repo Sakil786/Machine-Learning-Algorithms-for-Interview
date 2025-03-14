@@ -18,13 +18,13 @@
 
 • Random Forest performs well because each tree is trained on a different subset of data and features, allowing the algorithm to capture patterns from various angles and reducing the dominance of very strong predictors like salary in the example given.
 
-# Pros (Advantages) of Random Forest:
+## Pros (Advantages) of Random Forest:
 • It reduces high variance and the tendency to overfit compared to individual decision trees.
 
 • It tends to give good results.
 
 • It is easy to implement using libraries in Python and R.
-# Cons (Disadvantages) of Random Forest:
+## Cons (Disadvantages) of Random Forest:
 
 • It can be considered a black box model, making it difficult to explain the model's mathematical workings in detail.
 
@@ -47,4 +47,15 @@
 * The final model is a combination of all the weak learners created during the process.
 * The key differences in AdaBoost compared to bagging are the sequential learning, the unequal weighting of weak learners, and the use of stumps as weak learners.
 * The internal methods for creating the stumps, such as using Gini index or entropy, remain the same as in standard decision tree creation.
+
+# How Gradient Boost works:
+* Gradient Boost is a boosting technique that combines multiple models sequentially.
+* Unlike AdaBoost, which adjusts the weights of misclassified records, Gradient Boost learns by optimising a loss function.
+* The process starts with a base value, which, in the case of regression, is the average of the target variable.
+* Residuals are then calculated as the difference between the actual target values and the initial predicted values (the average).
+* A new model, often a decision tree with leaf nodes typically ranging from 8 to 32, is trained to predict these residuals, using the original independent variables. This residual becomes the target column for this new model.
+* The predictions from this residual model are then used to update the initial prediction. This update is done by adding the predicted residuals, multiplied by a learning rate, to the previous prediction. The learning rate controls the step size of the update.
+* This process is iterative; after the first iteration, new residuals are calculated based on the updated predictions, and another model is trained to predict these new residuals.
+* The final prediction of the Gradient Boost model is an additive combination of the initial base value and the predictions from each of the subsequent residual models, each scaled by the learning rate. This continues for a predefined number of trees or until a certain criterion is met.
+
 
