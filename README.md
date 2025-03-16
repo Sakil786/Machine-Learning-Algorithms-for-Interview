@@ -91,3 +91,12 @@
 * The new prediction is calculated as: **Previous Prediction + Learning Rate * Output of the Residual Tree.** The learning rate (eta) controls how quickly the model converges to the next value.
 * After obtaining the new prediction, the residual is updated (original target value minus the new prediction).
 * Subsequent models are trained on these new, reduced residuals, and this process is repeated iteratively. The goal is to progressively reduce the residuals and create a final ensemble model that provides accurate predictions.
+
+# CatBoost:
+* CatBoost is a machine learning algorithm that can directly process text and categorical features alongside numerical features without requiring explicit pre-processing like TF-IDF, bag of words, one-hot encoding, or label encoding.
+* It can effectively train models on a limited amount of data by deriving maximum information.
+* CatBoost tends to perform well when dealing with datasets having many categorical columns with numerous categories.
+* The algorithm is known for its fast training and prediction times, and it can utilise both CPU and GPU resources.
+* CatBoost employs a special method for handling categorical features called ordered target-based encoding to avoid data leakage. This involves shuffling the data and encoding categorical values based on the target variable from preceding rows according to a specific formula (current count + prior) / (max count + 1).
+* For sampling, CatBoost uses a technique called minimal variance sampling (MVS) at the tree level, which performs weighted sampling to maximise accuracy at each split.
+* Important parameters in CatBoost include the loss function, pool (an internal data structure for efficiency), GPU/CPU settings, the concept of a golden parameter (assigning higher importance to specific features), and different bootstrapping methods like MVS, uniform, and random.
