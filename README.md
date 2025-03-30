@@ -161,6 +161,51 @@ X_pca = pca.fit_transform(X)
 ✔ **Selection** removes irrelevant or redundant features.  
 ✔ **Transformation** reshapes data for better model fit.  
 
+## Optimization Techniques (gradient descent, stochastic gradient descent, Adam)
+### **Optimization Techniques 🚀**  
+Optimization algorithms minimize the loss function to improve model performance.
+#### **1. Gradient Descent (GD) 🔽**  
+- **Goal:** Minimize loss by updating parameters in the direction of the negative gradient.  
+- **Types:**  
+  - **Batch GD** – Uses the entire dataset (slow but stable).  
+  - **SGD** – Updates after each sample (fast but noisy).  
+  - **Mini-Batch GD** – Uses small batches (balance of speed & stability).  
+
+📌 **Formula:**  
+$$
+\theta = \theta - \alpha \cdot \nabla J(\theta)
+$$
+
+
+---
+
+#### **2. Stochastic Gradient Descent (SGD) ⚡**  
+- **Fast updates**, great for **large datasets**, but has **high variance**.  
+- **Fixes:** Use **Momentum** or **Mini-Batches** to stabilize.  
+
+---
+
+#### **3. Adam Optimizer 🏆**  
+- **Combines Momentum & RMSprop** for adaptive learning rates.  
+- **Pros:** Fast, stable, works well for deep learning & sparse data.  
+
+📌 **Formula (Update Rule):**  
+\[
+\theta = \theta - \alpha \cdot \frac{\hat{m_t}}{\sqrt{\hat{v_t}} + \epsilon}
+\]
+
+---
+
+### **Comparison Table 📊**  
+
+| Optimizer  | Speed | Stability | Best For |
+|------------|-------|-----------|----------|
+| **GD**     | Slow  | High      | Small datasets |
+| **SGD**    | Fast  | Noisy     | Large datasets |
+| **Mini-Batch GD** | Balanced | Good | Most ML tasks |
+| **Adam**   | Fastest | Very Stable | Deep learning |
+
+🔹 **Best Choice?** **Adam** for deep learning, **Mini-Batch GD** for general ML.  
 
 
 # How Random Forest Works:
