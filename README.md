@@ -206,8 +206,58 @@ $$
 | **Adam**   | Fastest | Very Stable | Deep learning |
 
 🔹 **Best Choice?** **Adam** for deep learning, **Mini-Batch GD** for general ML.  
+## Evaluation Metrics (accuracy, precision, recall, F1-score, AUC-ROC, RMSE) 
 
+#### **1. Accuracy 📊**  
+- **Formula:**  
+  Accuracy = (TP + TN) / (TP + TN + FP + FN)
+- **Best for:** Balanced datasets.  
+- **Issue:** Misleading for imbalanced data.  
 
+---
+
+#### **2. Precision 🎯 (Positive Predictive Value)**  
+- **Formula:**  
+  Precision = TP / (TP + FP)
+- **Best for:** Avoiding false positives (e.g., spam detection).  
+
+---
+
+#### **3. Recall (Sensitivity) 🔥**  
+- **Formula:**  
+ Recall = TP / (TP + FN)
+- **Best for:** Catching all positives (e.g., medical diagnoses).  
+
+---
+
+#### **4. F1-Score ⚖️ (Balance Between Precision & Recall)**  
+- **Formula:**  
+ F1 = 2 × (Precision × Recall) / (Precision + Recall)
+- **Best for:** Imbalanced datasets.  
+
+---
+
+#### **5. AUC-ROC (Area Under Curve - Receiver Operating Characteristic) 📈**  
+- **Measures:** Model’s ability to distinguish between classes.  
+- **Best for:** Evaluating classification performance at different thresholds.  
+
+---
+
+#### **6. RMSE (Root Mean Squared Error) 📉**  
+- **Formula:**  
+ RMSE = √((1/n) ∑ (y_true - y_pred)²)
+- **Best for:** Regression tasks (penalizes large errors more).  
+
+---
+
+### **Metric Selection Guide 🏆**  
+| Task | Best Metric |
+|------|------------|
+| **Balanced Classification** | Accuracy, F1-score |
+| **Imbalanced Classification** | Precision (low FP) / Recall (low FN), AUC-ROC |
+| **Regression** | RMSE |
+
+Would you like a Python code snippet for implementation? 🚀
 # How Random Forest Works:
 • Random Forest is an ensemble learning technique that combines learning from multiple models. 
 
