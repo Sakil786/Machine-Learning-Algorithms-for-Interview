@@ -66,8 +66,8 @@ The **bias-variance tradeoff** describes the balance between two types of errors
 **Note**
 * Bias: Error of the training data
 * Variance: Error of the test data
-* **Underfitting **: For training data ,Model's accuracy is low and also for test data,Model's accuracy is low (i.e. High bias and High variance)
-*** Overfitting** : For the training data,Model's accuracy is high but for the test data,Model's accuracy is going down(i.e. low bias and High variance)
+* **Underfitting**: For training data ,Model's accuracy is low and also for test data,Model's accuracy is low (i.e. High bias and High variance)
+* **Overfitting** : For the training data,Model's accuracy is high but for the test data,Model's accuracy is going down(i.e. low bias and High variance)
 
 
 
