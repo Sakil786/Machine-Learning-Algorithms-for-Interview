@@ -23,7 +23,51 @@
 | **Example Algorithms**| Logistic Regression, Decision Trees, Random Forest, SVM, Neural Networks. | Linear Regression, Ridge Regression, Lasso, Neural Networks. | K-Means, Hierarchical Clustering, DBSCAN. |
 | **Example Use Cases** | Email spam detection (spam/ham), image classification (dog/cat). | Predicting house prices, stock price forecasting. | Customer segmentation, document clustering. |
 
+## Bias-Variance Tradeoff (overfitting vs. underfitting)
+### **Bias-Variance Tradeoff** 🎯  
 
+The **bias-variance tradeoff** describes the balance between two types of errors that affect a model’s performance:  
+
+- **Bias (Underfitting)** → Error due to oversimplification  
+- **Variance (Overfitting)** → Error due to sensitivity to noise  
+
+🔹 **Bias**:  
+- Measures how much the predicted values deviate from the true values.  
+- High bias occurs when a model is too simple and ignores patterns in the data.  
+- **Example**: Linear regression on a highly nonlinear dataset.  
+
+🔹 **Variance**:  
+- Measures how much the predictions fluctuate for different training sets.  
+- High variance occurs when a model is too complex and captures noise as patterns.  
+- **Example**: Deep neural network with too many layers trained on a small dataset.  
+
+---
+
+### **Overfitting vs. Underfitting**  
+
+| **Feature**        | **Overfitting** 🏋️‍♂️ (High Variance) | **Underfitting** 🏃‍♂️ (High Bias) |
+|-------------------|--------------------------------|--------------------------------|
+| **Definition**   | Model learns too much from training data, including noise. | Model is too simple to capture underlying patterns. |
+| **Error Type**   | Low training error, high test error. | High training and test error. |
+| **Model Complexity** | Too complex (deep neural networks, high-degree polynomials). | Too simple (linear regression on nonlinear data). |
+| **Generalization** | Poor – does not perform well on unseen data. | Poor – fails to learn from training data. |
+| **Solution**      | Reduce model complexity, regularization (L1/L2), more training data. | Increase model complexity, add more features, reduce regularization. |
+
+---
+
+### **How to Find the Right Balance?**  
+
+1️⃣ **Train-Validation Split**: Use a validation set to monitor performance.  
+2️⃣ **Cross-Validation**: Helps assess how the model generalizes.  
+3️⃣ **Regularization**: L1/L2 regularization (Ridge/Lasso) helps reduce overfitting.  
+4️⃣ **Feature Engineering**: Improve model inputs instead of adding complexity.  
+5️⃣ **More Data**: Helps combat overfitting by exposing the model to more variations.  
+
+**Note**
+* Bias: Error of the training data
+* Variance: Error of the test data
+* **Underfitting **: For training data ,Model's accuracy is low and also for test data,Model's accuracy is low (i.e. High bias and High variance)
+*** Overfitting** : For the training data,Model's accuracy is high but for the test data,Model's accuracy is going down(i.e. low bias and High variance)
 
 
 
