@@ -1,4 +1,33 @@
 # Machine-Learning-Algorithms-for-Interview
+# Foundations of Machine Learning
+## Supervised vs. Unsupervised Learning (classification, regression, clustering)
+### **Supervised vs. Unsupervised Learning**  
+
+| Feature                | **Supervised Learning**                                       | **Unsupervised Learning**                                 |
+|------------------------|-------------------------------------------------|-------------------------------------------|
+| **Definition**         | Learning from labeled data where the model is trained with input-output pairs. | Learning from unlabeled data to identify patterns and structure. |
+| **Goal**              | Predict outcomes (classification or regression). | Discover hidden structures and relationships in data. |
+| **Training Data**      | Labeled (contains both input and correct output). | Unlabeled (only input data, no predefined output). |
+| **Example Algorithms**| Linear Regression, Decision Trees, Neural Networks, Support Vector Machines (SVM). | K-Means, DBSCAN, Hierarchical Clustering, Principal Component Analysis (PCA). |
+| **Common Applications** | Spam detection, fraud detection, image recognition, speech recognition. | Customer segmentation, anomaly detection, dimensionality reduction. |
+
+---
+
+### **Classification vs. Regression vs. Clustering**  
+
+| Feature                | **Classification**                         | **Regression**                           | **Clustering**                           |
+|------------------------|--------------------------------|--------------------------------|--------------------------------|
+| **Type**              | Supervised Learning             | Supervised Learning             | Unsupervised Learning         |
+| **Output**            | Categorical (labels/classes)   | Continuous (numerical values)  | Groups or clusters            |
+| **Goal**              | Assigns input to predefined categories. | Predicts a numerical value.   | Finds natural groupings in data. |
+| **Example Algorithms**| Logistic Regression, Decision Trees, Random Forest, SVM, Neural Networks. | Linear Regression, Ridge Regression, Lasso, Neural Networks. | K-Means, Hierarchical Clustering, DBSCAN. |
+| **Example Use Cases** | Email spam detection (spam/ham), image classification (dog/cat). | Predicting house prices, stock price forecasting. | Customer segmentation, document clustering. |
+
+
+
+
+
+
 # How Random Forest Works:
 • Random Forest is an ensemble learning technique that combines learning from multiple models. 
 
