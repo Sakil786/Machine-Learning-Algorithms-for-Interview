@@ -286,7 +286,18 @@ Regularization is a process in machine learning to find the optimal balance (swe
 * The purpose of L1 regularization is also to shrink the coefficients. The optimal lambda value needs to be tuned based on the data.
 * L1 and L2 regularization tune the cost function of simple linear regression by adding a penalty term to achieve coefficient shrinkage and find the sweet spot.
 * It is generally recommended to normalise or standardise your data before applying Lasso or Ridge regression to achieve better results.
-* There are slight differences between L1 and L2 regularization, such as L1 potentially making some coefficients exactly zero (useful for feature selection), which will be covered in further detail in another video
+* There are slight differences between L1 and L2 regularization, such as L1 potentially making some coefficients exactly zero.
+### logistic regression
+- **Definition**: Logistic regression is a statistical model used for binary classification (e.g., spam vs. not spam).  
+- **Formula**: Uses the **sigmoid function**:  
+  \[
+  P(Y=1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + ... + \beta_n X_n)}}
+  \]  
+- **Output**: Produces probabilities between 0 and 1, which can be thresholded for classification.  
+- **Loss Function**: Optimized using **log-likelihood** (cross-entropy loss).  
+- **Training**: Parameters are learned using **gradient descent** or other optimization techniques.  
+- **Extension**: Can be extended to **multiclass classification** using softmax (multinomial logistic regression).  
+- **Interpretability**: Coefficients represent the log-odds of the outcome.
 # How Random Forest Works:
 • Random Forest is an ensemble learning technique that combines learning from multiple models. 
 
