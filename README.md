@@ -260,6 +260,21 @@ $$
 # Algorithms and Models
 ## Linear Models
 ### linear regression : 
+* Linear regression aims to find the best fit line for a dataset, represented by the equation y = MX + C.
+* In this equation, M is the slope, indicating the change in the dependent variable (y, e.g., price) for a unit change in the independent variable (x, e.g., size).
+* C is the intercept, representing the value of y when x is zero.
+* The best fit line is determined by minimising the error between the predicted values (Y hat) from the line and the actual data points (Y).
+* This error is quantified using a cost function: 1/(2m) * Σ(Y hat - Y)^2, where m is the number of data points.
+* Y hat is calculated using the linear equation: Y hat = MX + C.
+* The goal is to find the values of M and C that minimise the cost function.
+* Gradient descent is an iterative optimisation algorithm used to find these optimal values.
+* It involves starting with initial values for M and C and then iteratively updating them based on the convergence theorem: M_new = M_old - α * d(Cost)/dM.
+* α is the learning rate, a small positive value that controls the step size of each iteration.
+* d(Cost)/dM is the derivative of the cost function with respect to M, representing the slope of the cost function curve at the current M value.
+* If the slope of the cost function is negative, M is increased; if it's positive, M is decreased, to move towards the global minima (the minimum point of the cost function).
+* A small learning rate is crucial for avoiding overshooting the global minima.
+* The algorithm stops when the slope of the cost function approaches zero, indicating that the optimal values for M and C have been found.
+* For multiple linear regression (with more than one independent variable), the concept extends to higher dimensions, with gradient descent optimising the coefficients for each feature to minimise a similar cost function
 # How Random Forest Works:
 • Random Forest is an ensemble learning technique that combines learning from multiple models. 
 
