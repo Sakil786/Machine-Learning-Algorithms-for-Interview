@@ -275,6 +275,18 @@ $$
 * A small learning rate is crucial for avoiding overshooting the global minima.
 * The algorithm stops when the slope of the cost function approaches zero, indicating that the optimal values for M and C have been found.
 * For multiple linear regression (with more than one independent variable), the concept extends to higher dimensions, with gradient descent optimising the coefficients for each feature to minimise a similar cost function
+
+### regularization
+Regularization is a process in machine learning to find the optimal balance (sweet spot) between a model that learns enough from the data and one that overfits the data.
+* The goal is to avoid underfitting (model not learning enough) and overfitting (model memorising the data and not generalising well to new data).
+* Different models employ different regularization techniques. For regression models, L1 and L2 regularization are used. For decision trees, techniques like bagging and boosting are employed to reduce variance. In deep learning, dropout layers help prevent overfitting.
+* L2 Regularization (Ridge Regression) works by adding a penalty term to the loss function. This penalty term is lambda (a hyperparameter) multiplied by the square of the coefficients (slopes).
+* The effect of this penalty is to shrink the coefficients. If a coefficient becomes too large (leading to a very steep curve), the penalty term increases significantly, thus increasing the overall loss function which the model tries to minimise. This prevents coefficients from going beyond a certain limit.
+* L1 Regularization (Lasso Regression) similarly adds a penalty term to the loss function. However, in this case, the penalty term is lambda multiplied by the absolute value (modulus) of the coefficients.
+* The purpose of L1 regularization is also to shrink the coefficients. The optimal lambda value needs to be tuned based on the data.
+* L1 and L2 regularization tune the cost function of simple linear regression by adding a penalty term to achieve coefficient shrinkage and find the sweet spot.
+* It is generally recommended to normalise or standardise your data before applying Lasso or Ridge regression to achieve better results.
+* There are slight differences between L1 and L2 regularization, such as L1 potentially making some coefficients exactly zero (useful for feature selection), which will be covered in further detail in another video
 # How Random Forest Works:
 • Random Forest is an ensemble learning technique that combines learning from multiple models. 
 
