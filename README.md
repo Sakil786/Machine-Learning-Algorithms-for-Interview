@@ -290,9 +290,7 @@ Regularization is a process in machine learning to find the optimal balance (swe
 ### logistic regression
 - **Definition**: Logistic regression is a statistical model used for binary classification (e.g., spam vs. not spam).  
 - **Formula**: Uses the **sigmoid function**:  
-  \[
-  P(Y=1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + ... + \beta_n X_n)}}
-  \]  
+  $$P(Y=1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}$$
 - **Output**: Produces probabilities between 0 and 1, which can be thresholded for classification.  
 - **Loss Function**: Optimized using **log-likelihood** (cross-entropy loss).  
 - **Training**: Parameters are learned using **gradient descent** or other optimization techniques.  
