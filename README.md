@@ -257,7 +257,9 @@ $$
 | **Imbalanced Classification** | Precision (low FP) / Recall (low FN), AUC-ROC |
 | **Regression** | RMSE |
 
-Would you like a Python code snippet for implementation? 🚀
+# Algorithms and Models
+## Linear Models
+### linear regression : 
 # How Random Forest Works:
 • Random Forest is an ensemble learning technique that combines learning from multiple models. 
 
