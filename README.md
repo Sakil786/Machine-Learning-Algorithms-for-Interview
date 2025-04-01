@@ -296,38 +296,27 @@ Regularization is a process in machine learning to find the optimal balance (swe
 - **Training**: Parameters are learned using **gradient descent** or other optimization techniques.  
 - **Extension**: Can be extended to **multiclass classification** using softmax (multinomial logistic regression).  
 - **Interpretability**: Coefficients represent the log-odds of the outcome.
-# How Random Forest Works:
-• Random Forest is an ensemble learning technique that combines learning from multiple models. 
+## Tree-based Models
+### How Random Forest Works:
+* Random Forest is an ensemble learning technique that combines learning from multiple models.
+* It is based on decision trees.
+* Multiple decision trees are built using the bagging technique or bootstrap aggregation.
+* For each tree, multiple bags of data are created by sampling the original data with replacement.
+* Each bag involves row sampling (randomly selecting a subset of rows, typically two-thirds of the original data) and column sampling (randomly selecting a subset of features, a starting point is the square root of the total number of columns).
+* One decision tree is fitted to each bag of data.
+* When making a prediction for a classification problem, majority voting is used across the predictions of all the trees.
+* For a regression problem, the prediction is typically the mean or average of the predictions from all the decision trees.
+* Random Forest performs well because each tree is trained on a different subset of data and features, allowing the algorithm to capture patterns from various angles and reducing the dominance of very strong predictors like salary in the example given.
 
-• It is based on decision trees.
+#### Pros (Advantages) of Random Forest:
+* It reduces high variance and the tendency to overfit compared to individual decision trees.
+* It tends to give good results.
+* It is easy to implement using libraries in Python and R.
+#### Cons (Disadvantages) of Random Forest:
+* It can be considered a black box model, making it difficult to explain the model's mathematical workings in detail.
+* Training can be computationally expensive in terms of space and time if the data size (number of rows) and feature size (number of columns) are very large because multiple decision trees are created
 
-• Multiple decision trees are built using the bagging technique or bootstrap aggregation.
-
-• For each tree, multiple bags of data are created by sampling the original data with replacement.
-
-• Each bag involves row sampling (randomly selecting a subset of rows, typically two-thirds of the original data) and column sampling (randomly selecting a subset of features, a starting point is the square root of the total number of columns).
-
-• One decision tree is fitted to each bag of data.
-
-• When making a prediction for a classification problem, majority voting is used across the predictions of all the trees.
-
-• For a regression problem, the prediction is typically the mean or average of the predictions from all the decision trees.
-
-• Random Forest performs well because each tree is trained on a different subset of data and features, allowing the algorithm to capture patterns from various angles and reducing the dominance of very strong predictors like salary in the example given.
-
-## Pros (Advantages) of Random Forest:
-• It reduces high variance and the tendency to overfit compared to individual decision trees.
-
-• It tends to give good results.
-
-• It is easy to implement using libraries in Python and R.
-## Cons (Disadvantages) of Random Forest:
-
-• It can be considered a black box model, making it difficult to explain the model's mathematical workings in detail.
-
-• Training can be computationally expensive in terms of space and time if the data size (number of rows) and feature size (number of columns) are very large because multiple decision trees are created
-
-# AdaBoost and how it works:
+### AdaBoost and how it works:
 * AdaBoost is a boosting technique and an implementation of ensemble learning.
 * It is a sequential learning process where one model (or weak learner) is dependent on the previous one. Model 2 depends on the output of Model 1, and so on.
 * Unlike bagging techniques like Random Forest which use parallel learning, AdaBoost's models learn in sequence.
@@ -345,7 +334,7 @@ Regularization is a process in machine learning to find the optimal balance (swe
 * The key differences in AdaBoost compared to bagging are the sequential learning, the unequal weighting of weak learners, and the use of stumps as weak learners.
 * The internal methods for creating the stumps, such as using Gini index or entropy, remain the same as in standard decision tree creation.
 
-# How Gradient Boost works:
+### How Gradient Boost works:
 * Gradient Boost is a boosting technique that combines multiple models sequentially.
 * Unlike AdaBoost, which adjusts the weights of misclassified records, Gradient Boost learns by optimising a loss function.
 * The process starts with a base value, which, in the case of regression, is the average of the target variable.
@@ -355,7 +344,7 @@ Regularization is a process in machine learning to find the optimal balance (swe
 * This process is iterative; after the first iteration, new residuals are calculated based on the updated predictions, and another model is trained to predict these new residuals.
 * The final prediction of the Gradient Boost model is an additive combination of the initial base value and the predictions from each of the subsequent residual models, each scaled by the learning rate. This continues for a predefined number of trees or until a certain criterion is met.
 
-# overview of XGBoost:
+### overview of XGBoost:
 * XGBoost is a popular and widely used boosting algorithm favoured by many data scientists.
 * It offers multi-language support, allowing you to run it with Python, R, Java, Scala, and Julia.
 * XGBoost is platform-free, enabling its use across different operating systems like Windows, macOS, and Linux.
@@ -374,7 +363,7 @@ Regularization is a process in machine learning to find the optimal balance (swe
 * **XGBoost is considered one of the best models in terms of performance and accuracy.**
 * **The algorithm has internal cross-validation capabilities.**
 
-# How XGBoost works:
+### How XGBoost works:
 * XGBoost is a boosting algorithm, which is an ensemble technique based on sequential learning. Unlike bagging (parallel), boosting trains models one after another.
 * XGBoost is considered an extension of gradient boosting.
 * The process begins by creating a base model. A simple initial assumption for prediction can be the average of the target variable. This initial model will have errors or residuals.
@@ -389,7 +378,7 @@ Regularization is a process in machine learning to find the optimal balance (swe
 * After obtaining the new prediction, the residual is updated (original target value minus the new prediction).
 * Subsequent models are trained on these new, reduced residuals, and this process is repeated iteratively. The goal is to progressively reduce the residuals and create a final ensemble model that provides accurate predictions.
 
-# CatBoost:
+### CatBoost:
 * CatBoost is a machine learning algorithm that can directly process text and categorical features alongside numerical features without requiring explicit pre-processing like TF-IDF, bag of words, one-hot encoding, or label encoding.
 * It can effectively train models on a limited amount of data by deriving maximum information.
 * CatBoost tends to perform well when dealing with datasets having many categorical columns with numerous categories.
