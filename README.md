@@ -386,3 +386,41 @@ Regularization is a process in machine learning to find the optimal balance (swe
 * CatBoost employs a special method for handling categorical features called ordered target-based encoding to avoid data leakage. This involves shuffling the data and encoding categorical values based on the target variable from preceding rows according to a specific formula (current count + prior) / (max count + 1).
 * For sampling, CatBoost uses a technique called minimal variance sampling (MVS) at the tree level, which performs weighted sampling to maximise accuracy at each split.
 * Important parameters in CatBoost include the loss function, pool (an internal data structure for efficiency), GPU/CPU settings, the concept of a golden parameter (assigning higher importance to specific features), and different bootstrapping methods like MVS, uniform, and random.
+## Bayesian Methods
+### Naïve Bayes:
+* Bayesian methods are statistical techniques that apply Bayes' theorem to update the probability of a hypothesis as more evidence or information becomes available.
+
+### Naïve Bayes Classifier
+* A supervised machine learning algorithm used primarily for classification tasks, particularly in text classification (e.g., spam detection).
+* Based on Bayes' theorem, it calculates the probability of a class given the features of the data, assuming independence among the features.
+* The formula for Naïve Bayes combines prior probabilities and conditional probabilities to compute posterior probabilities.
+  
+#### Key Components of Naïve Bayes
+  - **Prior Probability**: The initial probability of a class before observing any data.
+  - **Conditional Probability**: The probability of observing specific features given a class.
+  - **Posterior Probability**: The updated probability of a class after considering new evidence.
+
+#### Assumptions of Naïve Bayes
+* Assumes that all features are independent (the "naïve" assumption), which simplifies calculations but may not hold true in real-world scenarios.
+* Each feature contributes equally to the prediction outcome.
+
+#### Applications of Naïve Bayes
+* Widely used in text classification tasks such as spam filtering, sentiment analysis, and document categorization due to its efficiency and effectiveness with large datasets.
+
+### Bayesian Inference
+* A method for statistical inference where prior beliefs about parameters are updated with evidence from data using Bayes' rule.
+* Involves specifying a prior distribution, observing data to form a likelihood, and then calculating a posterior distribution that reflects updated beliefs about the parameters.
+
+#### Key Elements in Bayesian Inference
+  - **Prior Distribution**: Represents initial beliefs before observing data.
+  - **Likelihood**: The probability of observing the data given a parameter value.
+  - **Posterior Distribution**: The updated beliefs about parameters after incorporating observed data.
+
+#### Advantages of Bayesian Methods
+* Provides a coherent framework for updating beliefs with new evidence.
+* Can incorporate prior knowledge and handle uncertainty effectively.
+  
+#### Limitations of Bayesian Methods
+* Computationally intensive for complex models or large datasets.
+* Results can be sensitive to the choice of prior distributions.
+
