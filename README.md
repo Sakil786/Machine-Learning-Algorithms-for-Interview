@@ -423,4 +423,28 @@ Regularization is a process in machine learning to find the optimal balance (swe
 #### Limitations of Bayesian Methods
 * Computationally intensive for complex models or large datasets.
 * Results can be sensitive to the choice of prior distributions.
-
+## Kernel Methods 
+### What Are Kernel Methods?
+* Kernel methods are a class of algorithms used for pattern analysis. They rely on kernel functions to compute the similarity between data points in a high-dimensional space without explicitly mapping the data to that space. This is called the "kernel trick."
+### Support Vector Machines (SVM)
+SVM is a supervised learning algorithm used for classification and regression. Here's how it works:
+* It tries to find the optimal hyperplane that separates data points from different classes with the maximum margin.
+* For linearly separable data, this is straightforward.
+* For non-linearly separable data, SVM uses kernel functions to map the data into a higher-dimensional space where a linear separator can be found.
+### Common Kernels
+* Linear kernel
+* Polynomial kernel
+* RBF (Gaussian) kernel
+#### RBF (Gaussian) kernel
+* It's powerful and non-linear.
+* It can handle complex boundaries.
+* It implicitly maps data into infinite-dimensional space.
+* It only requires tuning C (regularization) and γ (gamma).
+#### Pros of RBF Kernel SVM
+* Works well with non-linear data.
+* Often performs better than linear or polynomial kernels.
+* Fewer hyperparameters than other non-linear models (like neural nets).
+#### Considerations
+* Choosing the right C and γ is critical.
+* Can be computationally expensive on large datasets.
+* Doesn’t scale well to very large datasets compared to simpler models.
