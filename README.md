@@ -448,3 +448,34 @@ SVM is a supervised learning algorithm used for classification and regression. H
 * Choosing the right C and γ is critical.
 * Can be computationally expensive on large datasets.
 * Doesn’t scale well to very large datasets compared to simpler models.
+## Dimensionality Reduction
+* Reducing the number of features (dimensions) in a dataset while preserving as much information (variance or structure) as possible. Useful for visualization, speed, and avoiding overfitting.
+### Principal Component Analysis (PCA)
+* A linear, unsupervised method that reduces dimensions by maximizing variance in orthogonal components.
+  #### Key steps:
+  * Standardize data
+  * Compute covariance matrix & eigenvectors
+  * Project data onto top eigenvectors (principal components)
+  * Use cases: Noise reduction, feature compression, and exploratory analysis
+  #### Trade-offs:
+  * Loses some interpretability
+  * Assumes linear relationships
+### t-Distributed Stochastic Neighbor Embedding (t-SNE)
+* A nonlinear, unsupervised technique for visualizing high-dimensional data in 2D/3D.
+  #### How it works:
+  * Preserves local similarities using probability distributions
+  * Minimizes KL divergence between high/low-dimensional spaces
+  * Use cases: Cluster visualization (e.g., MNIST digits), data exploration.
+ #### Trade-offs:
+ * Computationally intensive
+ * Stochastic (results vary across runs)
+ * Not for feature reduction in models
+### Linear Discriminant Analysis (LDA)
+* A supervised, linear method for classification tasks that maximizes class separation.
+  #### Key features:
+  * Reduces dimensions to (number of classes - 1)
+  * Assumes normal data distribution and equal class covariances
+  * Use cases: Face recognition, medical diagnosis, and preprocessing for classifiers.
+ #### Trade-offs:
+ * Fails with non-Gaussian/non-linear data
+ * Requires labeled data
