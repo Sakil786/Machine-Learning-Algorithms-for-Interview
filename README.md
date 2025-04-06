@@ -489,39 +489,39 @@ SVM is a supervised learning algorithm used for classification and regression. H
 ### Bagging (Bootstrap Aggregating)
 * Goal: Reduce variance
 * How:
-  ** Train multiple models on different random subsets of the data (with replacement).
-  ** Final output: Majority vote (classification) or average (regression)
+  * Train multiple models on different random subsets of the data (with replacement).
+  * Final output: Majority vote (classification) or average (regression)
 * Key Model: Random Forest (uses bagging with decision trees)
 * Pros:
-  ** Reduces overfitting
-  ** Easy to parallelize
+  * Reduces overfitting
+  * Easy to parallelize
 * Cons:
-  ** Doesn’t reduce bias
+  * Doesn’t reduce bias
 ### Boosting
 * Goal: Reduce bias (and sometimes variance)
 * How:
-  ** Train models sequentially, each new model focuses on the errors of the previous ones.
-  ** Assign more weight to misclassified points.
-  ** Final output: Weighted vote/average
+  * Train models sequentially, each new model focuses on the errors of the previous ones.
+  * Assign more weight to misclassified points.
+  * Final output: Weighted vote/average
 * Popular Types:
-  ** AdaBoost (adaptive weights)
-  ** Gradient Boosting (minimizes loss)
-  ** XGBoost, LightGBM, CatBoost (optimized versions)
+  * AdaBoost (adaptive weights)
+  * Gradient Boosting (minimizes loss)
+  * XGBoost, LightGBM, CatBoost (optimized versions)
 * Pros:
-  ** High accuracy
-  ** Handles bias well
+  * High accuracy
+  * Handles bias well
 * Cons:
-  ** Sensitive to noise
-  ** Slower to train
+  * Sensitive to noise
+  * Slower to train
 ### Stacking (Stacked Generalization)
 * Goal: Combine diverse models effectively
 * How:
-  ** Train multiple different models (level-0).
-  ** Use their predictions as input to a meta-model (level-1) to make final predictions.
+  * Train multiple different models (level-0).
+  * Use their predictions as input to a meta-model (level-1) to make final predictions.
 * Pros:
-  ** Combines strengths of various models
-  ** Very flexible
+  * Combines strengths of various models
+  * Very flexible
 * Cons:
-  ** Complex
-  ** Needs careful validation to avoid overfitting
+  * Complex
+  * Needs careful validation to avoid overfitting
     
